@@ -82,7 +82,7 @@ elseif s:configuration.style ==# 'day'
   let s:palette = {
         \ 'black':      ['#06080a',   '237',  'DarkGrey'],
         \ 'bg0':        ['#e1e2e7',   '235',  'Black'],
-        \ 'bg1':        ['#99A7DF',   '236',  'DarkGrey'],
+        \ 'bg1':        ['#c4c8da',   '236',  'DarkGrey'],
         \ 'bg2':        ['#e9e9ec',   '236',  'DarkGrey'],
         \ 'bg3':        ['#333954',   '237',  'DarkGrey'],
         \ 'bg4':        ['#3a405e',   '237',  'Grey'],
@@ -93,6 +93,7 @@ elseif s:configuration.style ==# 'day'
         \ 'bg_blue':    ['#7da6ff',   '110',  'Blue'],
         \ 'diff_blue':  ['#3e5380',   '17',   'DarkBlue'],
         \ 'fg':         ['#3760bf',   '250',  'White'],
+        \ 'fg_gutter':  ['#a8aecb',   '250',  'White'],
         \ 'red':        ['#f52a65',   '203',  'Red'],
         \ 'orange':     ['#b15c00',   '215',  'Orange'],
         \ 'yellow':     ['#8c6c3e',   '179',  'Yellow'],
@@ -187,7 +188,7 @@ if s:configuration.transparent_background
   call s:HL('EndOfBuffer', s:palette.bg0, s:palette.none)
   call s:HL('FoldColumn', s:palette.grey, s:palette.none)
   call s:HL('Folded', s:palette.grey, s:palette.none)
-  call s:HL('SignColumn', s:palette.fg, s:palette.none)
+  call s:HL('SignColumn', s:palette.bg0, s:palette.fg_gutter)
   call s:HL('ToolbarLine', s:palette.fg, s:palette.none)
 else
   call s:HL('Normal', s:palette.fg, s:palette.bg0)
