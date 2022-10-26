@@ -92,14 +92,14 @@ elseif s:configuration.style ==# 'day'
         \ 'diff_green': ['#618041',   '22',   'DarkGreen'],
         \ 'bg_blue':    ['#7da6ff',   '110',  'Blue'],
         \ 'diff_blue':  ['#3e5380',   '17',   'DarkBlue'],
-        \ 'fg':         ['#a9b1d6',   '250',  'White'],
-        \ 'red':        ['#F7768E',   '203',  'Red'],
-        \ 'orange':     ['#FF9E64',   '215',  'Orange'],
-        \ 'yellow':     ['#E0AF68',   '179',  'Yellow'],
-        \ 'green':      ['#9ECE6A',   '107',  'Green'],
-        \ 'blue':       ['#7AA2F7',   '110',  'Blue'],
-        \ 'purple':     ['#ad8ee6',   '176',  'Magenta'],
-        \ 'grey':       ['#444B6A',   '246',  'LightGrey'],
+        \ 'fg':         ['#3760bf',   '250',  'White'],
+        \ 'red':        ['#f52a65',   '203',  'Red'],
+        \ 'orange':     ['#b15c00',   '215',  'Orange'],
+        \ 'yellow':     ['#8c6c3e',   '179',  'Yellow'],
+        \ 'green':      ['#587539',   '107',  'Green'],
+        \ 'blue':       ['#2e7de9',   '110',  'Blue'],
+        \ 'purple':     ['#7847bd',   '176',  'Magenta'],
+        \ 'grey':       ['#8990b3',   '246',  'LightGrey'],
         \ 'none':       ['NONE',      'NONE', 'NONE']
         \ }
 endif
