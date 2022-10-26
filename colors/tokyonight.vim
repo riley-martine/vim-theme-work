@@ -80,28 +80,66 @@ elseif s:configuration.style ==# 'storm'
         \ }
 elseif s:configuration.style ==# 'day'
   let s:palette = {
-        \ 'black':      ['#06080a',   '237',  'DarkGrey'],
-        \ 'bg0':        ['#e1e2e7',   '235',  'Black'],
-        \ 'bg1':        ['#c4c8da',   '236',  'DarkGrey'],
-        \ 'bg2':        ['#e9e9ec',   '236',  'DarkGrey'],
-        \ 'bg3':        ['#333954',   '237',  'DarkGrey'],
-        \ 'bg4':        ['#3a405e',   '237',  'Grey'],
-        \ 'bg_red':     ['#ff7a93',   '203',  'Red'],
-        \ 'diff_red':   ['#803d49',   '52',   'DarkRed'],
-        \ 'bg_green':   ['#b9f27c',   '107',  'Green'],
-        \ 'diff_green': ['#618041',   '22',   'DarkGreen'],
-        \ 'bg_blue':    ['#7da6ff',   '110',  'Blue'],
-        \ 'diff_blue':  ['#3e5380',   '17',   'DarkBlue'],
-        \ 'fg':         ['#3760bf',   '250',  'White'],
-        \ 'fg_gutter':  ['#a8aecb',   '250',  'White'],
-        \ 'red':        ['#f52a65',   '203',  'Red'],
-        \ 'orange':     ['#b15c00',   '215',  'Orange'],
-        \ 'yellow':     ['#8c6c3e',   '179',  'Yellow'],
-        \ 'green':      ['#587539',   '107',  'Green'],
-        \ 'blue':       ['#2e7de9',   '110',  'Blue'],
-        \ 'purple':     ['#7847bd',   '176',  'Magenta'],
+        \ 'bg':             ['#e1e2e7', 'NONE', 'NONE'],
+        \ 'bg0':            ['#e1e2e7',   '235',  'Black'],
+        \ 'bg1':            ['#c4c8da',   '236',  'DarkGrey'],
+        \ 'bg2':            ['#e9e9ec',   '236',  'DarkGrey'],
+        \ 'bg3':            ['#333954',   '237',  'DarkGrey'],
+        \ 'bg4':            ['#3a405e',   '237',  'Grey'],
+        \ 'bg_blue':        ['#7da6ff',   '110',  'Blue'],
+        \ 'bg_dark':        ['#e9e9ec', 'NONE', 'NONE'],
+        \ 'bg_float':       ['#e9e9ec', 'NONE', 'NONE'],
+        \ 'bg_green':       ['#b9f27c',   '107',  'Green'],
+        \ 'bg_highlight':   ['#c4c8da', 'NONE', 'NONE'],
+        \ 'bg_popup':       ['#e9e9ec', 'NONE', 'NONE'],
+        \ 'bg_red':         ['#ff7a93',   '203',  'Red'],
+        \ 'bg_search':      ['#7890dd', 'NONE', 'NONE'],
+        \ 'bg_sidebar':     ['#e9e9ec', 'NONE', 'NONE'],
+        \ 'bg_statusline':  ['#e9e9ec', 'NONE', 'NONE'],
+        \ 'bg_visual':      ['#99a7df', 'NONE', 'NONE'],
+        \ 'black':          ['#e9e9ed', 'NONE', 'NONE'],
+        \ 'blue':           ['#2e7de9', 'NONE', 'NONE'],
+        \ 'blue0':          ['#7890dd', 'NONE', 'NONE'],
+        \ 'blue1':          ['#188092', 'NONE', 'NONE'],
+        \ 'blue2':          ['#07879d', 'NONE', 'NONE'],
+        \ 'blue5':          ['#006a83', 'NONE', 'NONE'],
+        \ 'blue6':          ['#2e5857', 'NONE', 'NONE'],
+        \ 'blue7':          ['#92a6d5', 'NONE', 'NONE'],
+        \ 'border':         ['#e9e9ed', 'NONE', 'NONE'],
+        \ 'border_highlight':  ['#7890dd', 'NONE', 'NONE'],
+        \ 'comment':           ['#848cb5', 'NONE', 'NONE'],
+        \ 'cyan':              ['#007197', 'NONE', 'NONE'],
+        \ 'dark3':             ['#8990b3', 'NONE', 'NONE'],
+        \ 'dark5':             ['#68709a', 'NONE', 'NONE'],
+        \ 'diff_add': ['#aecde6', 'NONE', 'NONE'],
+        \ 'diff_change': ['#d6d8e3', 'NONE', 'NONE'],
+        \ 'diff_delete': ['#dfccd4', 'NONE', 'NONE'],
+        \ 'diff_text': ['#92a6d5', 'NONE', 'NONE'],
+        \ 'diff_blue':         ['#3e5380',   '17',   'DarkBlue'],
+        \ 'diff_green':        ['#618041',   '22',   'DarkGreen'],
+        \ 'diff_red':          ['#803d49',   '52',   'DarkRed'],
+        \ 'error':             ['#c64343', 'NONE', 'NONE'],
+        \ 'fg':                ['#3760bf', 'NONE', 'NONE'],
+        \ 'fg_dark':           ['#6172b0', 'NONE', 'NONE'],
+        \ 'fg_gutter':         ['#a8aecb', 'NONE', 'NONE'],
+        \ 'fg_sidebar':  ['#6172b0', 'NONE', 'NONE'],
+        \ 'green':  ['#587539', 'NONE', 'NONE'],
+        \ 'green1':  ['#387068', 'NONE', 'NONE'],
+        \ 'green2':  ['#38919f', 'NONE', 'NONE'],
         \ 'grey':       ['#8990b3',   '246',  'LightGrey'],
-        \ 'none':       ['NONE',      'NONE', 'NONE']
+        \ 'hint':  ['#118c74', 'NONE', 'NONE'],
+        \ 'info':  ['#07879d', 'NONE', 'NONE'],
+        \ 'magenta':  ['#9854f1', 'NONE', 'NONE'],
+        \ 'magenta2':  ['#d20065', 'NONE', 'NONE'],
+        \ 'none':  ['NONE', 'NONE', 'NONE'],
+        \ 'orange':  ['#b15c00', 'NONE', 'NONE'],
+        \ 'purple':  ['#7847bd', 'NONE', 'NONE'],
+        \ 'red':  ['#f52a65', 'NONE', 'NONE'],
+        \ 'red1':  ['#c64343', 'NONE', 'NONE'],
+        \ 'teal':  ['#118c74', 'NONE', 'NONE'],
+        \ 'terminal_black':  ['#a1a6c5', 'NONE', 'NONE'],
+        \ 'warning':  ['#8c6c3e', 'NONE', 'NONE'],
+        \ 'yellow':  ['#8c6c3e', 'NONE', 'NONE']
         \ }
 endif
 
@@ -185,87 +223,97 @@ endif
 if s:configuration.transparent_background
   call s:HL('Normal', s:palette.fg, s:palette.none)
   call s:HL('Terminal', s:palette.fg, s:palette.none)
-  call s:HL('EndOfBuffer', s:palette.bg0, s:palette.none)
+  call s:HL('EndOfBuffer', s:palette.bg, s:palette.none)
   call s:HL('FoldColumn', s:palette.grey, s:palette.none)
-  call s:HL('Folded', s:palette.grey, s:palette.none)
-  call s:HL('SignColumn', s:palette.bg0, s:palette.fg_gutter)
+  call s:HL('Folded', s:palette.blue, s:palette.fg_gutter)
+  call s:HL('SignColumn', s:palette.bg, s:palette.fg_gutter)
+  call s:HL('SignColumnSB', s:palette.bg_sidebar, s:palette.fg_gutter)
   call s:HL('ToolbarLine', s:palette.fg, s:palette.none)
 else
-  call s:HL('Normal', s:palette.fg, s:palette.bg0)
-  call s:HL('Terminal', s:palette.fg, s:palette.bg0)
-  call s:HL('EndOfBuffer', s:palette.bg0, s:palette.bg0)
-  call s:HL('FoldColumn', s:palette.grey, s:palette.bg1)
-  call s:HL('Folded', s:palette.grey, s:palette.bg1)
-  call s:HL('SignColumn', s:palette.fg, s:palette.bg1)
+  call s:HL('Normal', s:palette.fg, s:palette.bg)
+  call s:HL('NormalNC', s:palette.fg, s:palette.bg)
+  call s:HL('NormalSB', s:palette.fg_sidebar, s:palette.bg_sidebar)
+  call s:HL('NormalFloat', s:palette.fg, s:palette.bg_float)
+  call s:HL('FloatBorder', s:palette.border_highlight, s:palette.bg_float)
+  call s:HL('Terminal', s:palette.fg, s:palette.bg)
+  call s:HL('EndOfBuffer', s:palette.bg, s:palette.none)
+  call s:HL('FoldColumn', s:palette.comment, s:palette.bg)
+  call s:HL('Folded', s:palette.blue, s:palette.fg_gutter)
+  call s:HL('SignColumn', s:palette.bg, s:palette.fg_gutter)
+  call s:HL('SignColumnSB', s:palette.bg_sidebar, s:palette.fg_gutter)
   call s:HL('ToolbarLine', s:palette.fg, s:palette.bg2)
 endif
-call s:HL('ColorColumn', s:palette.none, s:palette.bg1)
-call s:HL('Conceal', s:palette.grey, s:palette.none)
+call s:HL('ColorColumn', s:palette.none, s:palette.black)
+call s:HL('Conceal', s:palette.dark5, s:palette.none)
 if s:configuration.cursor ==# 'auto'
-  call s:HL('Cursor', s:palette.none, s:palette.none, 'reverse')
+  call s:HL('Cursor', s:palette.bg, s:palette.fg)
 elseif s:configuration.cursor ==# 'red'
-  call s:HL('Cursor', s:palette.bg0, s:palette.red)
+  call s:HL('Cursor', s:palette.bg, s:palette.red)
 elseif s:configuration.cursor ==# 'green'
-  call s:HL('Cursor', s:palette.bg0, s:palette.green)
+  call s:HL('Cursor', s:palette.bg, s:palette.green)
 elseif s:configuration.cursor ==# 'blue'
-  call s:HL('Cursor', s:palette.bg0, s:palette.blue)
+  call s:HL('Cursor', s:palette.bg, s:palette.blue)
 endif
 highlight! link vCursor Cursor
 highlight! link iCursor Cursor
 highlight! link lCursor Cursor
 highlight! link CursorIM Cursor
-call s:HL('CursorColumn', s:palette.none, s:palette.bg1)
-call s:HL('CursorLine', s:palette.none, s:palette.bg1)
-call s:HL('LineNr', s:palette.grey, s:palette.none)
+call s:HL('CursorColumn', s:palette.none, s:palette.bg_highlight)
+call s:HL('CursorLine', s:palette.none, s:palette.bg_highlight)
+call s:HL('LineNr', s:palette.fg_gutter, s:palette.none)
 if &relativenumber == 1 && &cursorline == 0
-  call s:HL('CursorLineNr', s:palette.fg, s:palette.none)
+  call s:HL('CursorLineNr', s:palette.dark5, s:palette.none)
 else
-  call s:HL('CursorLineNr', s:palette.fg, s:palette.bg1)
+  call s:HL('CursorLineNr', s:palette.dark5, s:palette.none)
 endif
-call s:HL('DiffAdd', s:palette.none, s:palette.diff_green)
-call s:HL('DiffChange', s:palette.none, s:palette.diff_blue)
-call s:HL('DiffDelete', s:palette.none, s:palette.diff_red)
-call s:HL('DiffText', s:palette.none, s:palette.none, 'reverse')
-call s:HL('Directory', s:palette.green, s:palette.none)
-call s:HL('ErrorMsg', s:palette.red, s:palette.none, 'bold,underline')
-call s:HL('WarningMsg', s:palette.yellow, s:palette.none, 'bold')
-call s:HL('ModeMsg', s:palette.fg, s:palette.none, 'bold')
-call s:HL('MoreMsg', s:palette.blue, s:palette.none, 'bold')
-call s:HL('IncSearch', s:palette.bg0, s:palette.bg_red)
-call s:HL('Search', s:palette.bg0, s:palette.bg_green)
-call s:HL('MatchParen', s:palette.none, s:palette.bg4)
-call s:HL('NonText', s:palette.bg4, s:palette.none)
-call s:HL('Whitespace', s:palette.bg4, s:palette.none)
-call s:HL('SpecialKey', s:palette.bg4, s:palette.none)
-call s:HL('Pmenu', s:palette.fg, s:palette.bg2)
-call s:HL('PmenuSbar', s:palette.none, s:palette.bg2)
+call s:HL('DiffAdd', s:palette.none, s:palette.diff_add)
+call s:HL('DiffChange', s:palette.none, s:palette.diff_change)
+call s:HL('DiffDelete', s:palette.none, s:palette.diff_delete)
+call s:HL('DiffText', s:palette.none, s:palette.diff_text)
+call s:HL('Directory', s:palette.blue, s:palette.none)
+call s:HL('ErrorMsg', s:palette.error, s:palette.none, 'bold,underline')
+call s:HL('WarningMsg', s:palette.warning, s:palette.none)
+call s:HL('ModeMsg', s:palette.fg_dark, s:palette.none, 'bold')
+call s:HL('MsgArea', s:palette.fg_dark, s:palette.none)
+call s:HL('MoreMsg', s:palette.blue, s:palette.none)
+call s:HL('IncSearch', s:palette.black, s:palette.orange)
+call s:HL('CurSearch', s:palette.black, s:palette.orange)
+call s:HL('Search', s:palette.fg, s:palette.bg_search)
+call s:HL('MatchParen', s:palette.orange, s:palette.none, 'bold')
+call s:HL('NonText', s:palette.dark3, s:palette.none)
+call s:HL('Whitespace', s:palette.fg_gutter, s:palette.none)
+call s:HL('SpecialKey', s:palette.dark3, s:palette.none)
+call s:HL('Pmenu', s:palette.fg, s:palette.bg_popup)
+call s:HL('PmenuSbar', s:palette.none, s:palette.bg_popup) "util.lighten(c.bg_popup, 0.95)
 if s:configuration.menu_selection_background ==# 'blue'
-  call s:HL('PmenuSel', s:palette.bg0, s:palette.bg_blue)
-  call s:HL('WildMenu', s:palette.bg0, s:palette.bg_blue)
+  call s:HL('PmenuSel', s:palette.none, s:palette.fg_gutter) " util.darken(c.fg_gutter, 0.8)
+  call s:HL('WildMenu', s:palette.none, s:palette.bg_visual)
 elseif s:configuration.menu_selection_background ==# 'green'
-  call s:HL('PmenuSel', s:palette.bg0, s:palette.bg_green)
+  call s:HL('PmenuSel', s:palette.none, s:palette.bg_green)
   call s:HL('WildMenu', s:palette.bg0, s:palette.bg_green)
 elseif s:configuration.menu_selection_background ==# 'red'
-  call s:HL('PmenuSel', s:palette.bg0, s:palette.bg_red)
+  call s:HL('PmenuSel', s:palette.none, s:palette.bg_red)
   call s:HL('WildMenu', s:palette.bg0, s:palette.bg_red)
 endif
-call s:HL('PmenuThumb', s:palette.none, s:palette.grey)
-call s:HL('Question', s:palette.yellow, s:palette.none)
-call s:HL('SpellBad', s:palette.red, s:palette.none, 'undercurl', s:palette.red)
-call s:HL('SpellCap', s:palette.yellow, s:palette.none, 'undercurl', s:palette.yellow)
-call s:HL('SpellLocal', s:palette.blue, s:palette.none, 'undercurl', s:palette.blue)
-call s:HL('SpellRare', s:palette.purple, s:palette.none, 'undercurl', s:palette.purple)
-call s:HL('StatusLine', s:palette.fg, s:palette.bg3)
-call s:HL('StatusLineTerm', s:palette.fg, s:palette.bg3)
-call s:HL('StatusLineNC', s:palette.grey, s:palette.bg1)
-call s:HL('StatusLineTermNC', s:palette.grey, s:palette.bg1)
-call s:HL('TabLine', s:palette.fg, s:palette.bg4)
-call s:HL('TabLineFill', s:palette.grey, s:palette.bg1)
-call s:HL('TabLineSel', s:palette.bg0, s:palette.bg_red)
-call s:HL('VertSplit', s:palette.black, s:palette.none)
-call s:HL('Visual', s:palette.none, s:palette.bg3)
-call s:HL('VisualNOS', s:palette.none, s:palette.bg3, 'underline')
-call s:HL('QuickFixLine', s:palette.blue, s:palette.none, 'bold')
+call s:HL('PmenuThumb', s:palette.none, s:palette.fg_gutter)
+call s:HL('Question', s:palette.blue, s:palette.none)
+call s:HL('Substitute', s:palette.red, s:palette.black)
+call s:HL('SpellBad', s:palette.none, s:palette.none, 'undercurl', s:palette.error)
+call s:HL('SpellCap', s:palette.none, s:palette.none, 'undercurl', s:palette.warning)
+call s:HL('SpellLocal', s:palette.none, s:palette.none, 'undercurl', s:palette.info)
+call s:HL('SpellRare', s:palette.none, s:palette.none, 'undercurl', s:palette.hint)
+call s:HL('StatusLine', s:palette.fg_sidebar, s:palette.bg_statusline)
+call s:HL('StatusLineTerm', s:palette.fg_sidebar, s:palette.bg_statusline)
+call s:HL('StatusLineNC', s:palette.fg_gutter, s:palette.bg_statusline)
+call s:HL('StatusLineTermNC', s:palette.fg_gutter, s:palette.bg_statusline)
+call s:HL('TabLine', s:palette.fg_gutter, s:palette.bg_statusline)
+call s:HL('TabLineFill', s:palette.none, s:palette.black)
+call s:HL('TabLineSel', s:palette.black, s:palette.blue)
+call s:HL('VertSplit', s:palette.border, s:palette.none)
+call s:HL('WinSeparator', s:palette.border, s:palette.none, 'bold')
+call s:HL('Visual', s:palette.none, s:palette.bg_visual)
+call s:HL('VisualNOS', s:palette.none, s:palette.bg_visual)
+call s:HL('QuickFixLine', s:palette.none, s:palette.bg_visual, 'bold')
 call s:HL('Debug', s:palette.yellow, s:palette.none)
 call s:HL('debugPC', s:palette.bg0, s:palette.green)
 call s:HL('debugBreakpoint', s:palette.bg0, s:palette.red)
@@ -286,53 +334,53 @@ endif
 " }}}
 " Syntax: {{{
 if s:configuration.enable_italic
-  call s:HL('Type', s:palette.blue, s:palette.none, 'italic')
-  call s:HL('Structure', s:palette.blue, s:palette.none, 'italic')
-  call s:HL('StorageClass', s:palette.blue, s:palette.none, 'italic')
-  call s:HL('Identifier', s:palette.orange, s:palette.none, 'italic')
+  call s:HL('Type', s:palette.blue1, s:palette.none, 'italic')
+  call s:HL('Structure', s:palette.blue1, s:palette.none, 'italic')
+  call s:HL('StorageClass', s:palette.blue1, s:palette.none, 'italic')
+  call s:HL('Identifier', s:palette.magenta, s:palette.none, 'italic')
   call s:HL('Constant', s:palette.orange, s:palette.none, 'italic')
 else
-  call s:HL('Type', s:palette.blue, s:palette.none)
-  call s:HL('Structure', s:palette.blue, s:palette.none)
-  call s:HL('StorageClass', s:palette.blue, s:palette.none)
-  call s:HL('Identifier', s:palette.orange, s:palette.none)
+  call s:HL('Type', s:palette.blue1, s:palette.none)
+  call s:HL('Structure', s:palette.blue1, s:palette.none)
+  call s:HL('StorageClass', s:palette.blue1, s:palette.none)
+  call s:HL('Identifier', s:palette.magenta, s:palette.none)
   call s:HL('Constant', s:palette.orange, s:palette.none)
 endif
-call s:HL('PreProc', s:palette.red, s:palette.none)
-call s:HL('PreCondit', s:palette.red, s:palette.none)
-call s:HL('Include', s:palette.red, s:palette.none)
-call s:HL('Keyword', s:palette.red, s:palette.none)
-call s:HL('Define', s:palette.red, s:palette.none)
-call s:HL('Typedef', s:palette.red, s:palette.none)
-call s:HL('Exception', s:palette.red, s:palette.none)
-call s:HL('Conditional', s:palette.red, s:palette.none)
-call s:HL('Repeat', s:palette.red, s:palette.none)
-call s:HL('Statement', s:palette.red, s:palette.none)
-call s:HL('Macro', s:palette.purple, s:palette.none)
-call s:HL('Error', s:palette.red, s:palette.none)
-call s:HL('Label', s:palette.purple, s:palette.none)
-call s:HL('Special', s:palette.purple, s:palette.none)
-call s:HL('SpecialChar', s:palette.purple, s:palette.none)
-call s:HL('Boolean', s:palette.purple, s:palette.none)
-call s:HL('String', s:palette.yellow, s:palette.none)
-call s:HL('Character', s:palette.yellow, s:palette.none)
-call s:HL('Number', s:palette.purple, s:palette.none)
-call s:HL('Float', s:palette.purple, s:palette.none)
-call s:HL('Function', s:palette.green, s:palette.none)
-call s:HL('Operator', s:palette.red, s:palette.none)
-call s:HL('Title', s:palette.red, s:palette.none, 'bold')
-call s:HL('Tag', s:palette.orange, s:palette.none)
-call s:HL('Delimiter', s:palette.fg, s:palette.none)
+call s:HL('PreProc', s:palette.cyan, s:palette.none)
+call s:HL('PreCondit', s:palette.cyan, s:palette.none)
+call s:HL('Include', s:palette.cyan, s:palette.none)
+call s:HL('Keyword', s:palette.cyan, s:palette.none)
+call s:HL('Define', s:palette.cyan, s:palette.none)
+call s:HL('Typedef', s:palette.blue1, s:palette.none)
+call s:HL('Exception', s:palette.cyan, s:palette.none)
+call s:HL('Conditional', s:palette.magenta, s:palette.none)
+call s:HL('Repeat', s:palette.magenta, s:palette.none)
+call s:HL('Statement', s:palette.magenta, s:palette.none)
+call s:HL('Macro', s:palette.cyan, s:palette.none)
+call s:HL('Error', s:palette.error, s:palette.none)
+call s:HL('Label', s:palette.magenta, s:palette.none)
+call s:HL('Special', s:palette.blue1, s:palette.none)
+call s:HL('SpecialChar', s:palette.blue1, s:palette.none)
+call s:HL('Boolean', s:palette.green, s:palette.none)
+call s:HL('String', s:palette.green, s:palette.none)
+call s:HL('Character', s:palette.green, s:palette.none)
+call s:HL('Number', s:palette.green, s:palette.none)
+call s:HL('Float', s:palette.green, s:palette.none)
+call s:HL('Function', s:palette.blue, s:palette.none)
+call s:HL('Operator', s:palette.blue5, s:palette.none)
+call s:HL('Title', s:palette.blue, s:palette.none, 'bold')
+call s:HL('Tag', s:palette.blue1, s:palette.none)
+call s:HL('Delimiter', s:palette.blue1, s:palette.none)
 if s:configuration.disable_italic_comment
-  call s:HL('Comment', s:palette.grey, s:palette.none)
-  call s:HL('SpecialComment', s:palette.grey, s:palette.none)
-  call s:HL('Todo', s:palette.blue, s:palette.none)
+  call s:HL('Comment', s:palette.comment, s:palette.none)
+  call s:HL('SpecialComment', s:palette.blue1, s:palette.none)
+  call s:HL('Todo', s:palette.bg, s:palette.yellow)
 else
-  call s:HL('Comment', s:palette.grey, s:palette.none, 'italic')
-  call s:HL('SpecialComment', s:palette.grey, s:palette.none, 'italic')
-  call s:HL('Todo', s:palette.blue, s:palette.none, 'italic')
+  call s:HL('Comment', s:palette.comment, s:palette.none, 'italic')
+  call s:HL('SpecialComment', s:palette.blue1, s:palette.none, 'italic')
+  call s:HL('Todo', s:palette.bg, s:palette.yellow, 'italic')
 endif
-call s:HL('Ignore', s:palette.grey, s:palette.none)
+call s:HL('Ignore', s:palette.none, s:palette.none)
 call s:HL('Underlined', s:palette.none, s:palette.none, 'underline')
 " }}}
 " Predefined Highlight Groups: {{{
