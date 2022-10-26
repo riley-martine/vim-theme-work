@@ -30,6 +30,17 @@ elseif s:style ==# 'storm'
 	let s:green = [ '#9ECE6A', 107 ]
 	let s:blue = [ '#7AA2F7', 110 ]
 	let s:purple = [ '#ad8ee6', 176 ]
+elseif s:style ==# 'day'
+	let s:foreground = [ '#e9e9ec', 250 ]
+	let s:background = [ '#e1e2e7', 235 ]
+	let s:background_alt = [ '#99a7df', 236 ]
+	let s:background_grey = [ '#444B6A', 238 ]
+	let s:red = [ '#f52a65', 203 ]
+	let s:yellow = [ '#8c6c3e', 179 ]
+	let s:green = [ '#587539', 107 ]
+	let s:blue = [ '#2e7de9', 110 ]
+	let s:purple = [ '#7847bd', 176 ]
+
 endif
 
 "                                     guifg            guibg                 ctermfg          ctermbg
