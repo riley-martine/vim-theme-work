@@ -81,8 +81,8 @@ elseif s:configuration.style ==# 'storm'
 elseif s:configuration.style ==# 'day'
   let s:palette = {
         \ 'black':      ['#06080a',   '237',  'DarkGrey'],
-        \ 'bg0':        ['#e9e9ec',   '235',  'Black'],
-        \ 'bg1':        ['#282d42',   '236',  'DarkGrey'],
+        \ 'bg0':        ['#e1e2e7',   '235',  'Black'],
+        \ 'bg1':        ['#e9e9ec',   '236',  'DarkGrey'],
         \ 'bg2':        ['#2f344d',   '236',  'DarkGrey'],
         \ 'bg3':        ['#333954',   '237',  'DarkGrey'],
         \ 'bg4':        ['#3a405e',   '237',  'Grey'],
